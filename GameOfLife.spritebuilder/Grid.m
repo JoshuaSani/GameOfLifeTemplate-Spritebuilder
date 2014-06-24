@@ -18,6 +18,7 @@ static const int GRID_COLUMNS = 10;
     NSMutableArray *_gridArray;
     float _cellWidth;
     float _cellHeight;
+    CCLabelTTF *_populationLabel;
 }
 
 - (void)onEnter
@@ -79,13 +80,15 @@ static const int GRID_COLUMNS = 10;
     // invert it's state - kill it if it's alive, bring it to life if it's dead.
     creature.isAlive = !creature.isAlive;
     
- /*   if (creature.isAlive == TRUE)
+    if (creature.isAlive == TRUE)
     {
         _totalAlive++;
     }
     else
         _totalAlive--;
-  */
+  
+    
+    _populationLabel.string = [NSString stringWithFormat:@"%d", self.totalAlive];
 }
 
 - (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
