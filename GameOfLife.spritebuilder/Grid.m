@@ -65,7 +65,7 @@ static const int GRID_COLUMNS = 10;
         y += _cellHeight;
     }
     
-    _totalAlive = 10;
+    
 }
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
@@ -79,8 +79,12 @@ static const int GRID_COLUMNS = 10;
     // invert it's state - kill it if it's alive, bring it to life if it's dead.
     creature.isAlive = !creature.isAlive;
     
-    
-
+    if (creature.isAlive == TRUE)
+    {
+        _totalAlive++;
+    }
+    else
+        _totalAlive--;
 }
 
 - (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
