@@ -168,14 +168,14 @@ static const int GRID_COLUMNS = 10;
             
             if (currentCreature.livingNeighbors == 3)
             {
-                checkingArray[i][j] = YES;
+                checkingArray[i][j] = true;
             }
             
             else
             {
                 if ((currentCreature.livingNeighbors <= 1) || (currentCreature.livingNeighbors >= 4))
                 {
-                    checkingArray[i][j] = NO;
+                    checkingArray[i][j] = false;
                 }
             }
            
@@ -190,14 +190,14 @@ static const int GRID_COLUMNS = 10;
             // access the creature in the cell that corresponds to the current row/column
             Creature *currentCreature = _gridArray[i][j];
             
-            if (checkingArray[i][j] == YES)
+            if (checkingArray[i][j] == true)
             {
                 currentCreature.isAlive = YES;
             }
             
             else
             {
-                if (checkingArray[i][j] == NO)
+                if (checkingArray[i][j] == false)
                 {
                     currentCreature.isAlive = NO;
                 }
