@@ -79,7 +79,7 @@ static const int GRID_COLUMNS = 10;
     creature.isAlive = !creature.isAlive;
     
     
-        _totalAlive++;
+        _totalAlive = 5;
 
 }
 
