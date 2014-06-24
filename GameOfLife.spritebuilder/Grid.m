@@ -88,7 +88,7 @@ static const int GRID_COLUMNS = 10;
         _totalAlive--;
   
     
-    _populationLabel.string = [NSString stringWithFormat:@"%d", self.totalAlive];
+    _populationLabel.string = [NSString stringWithFormat:@"%d", _totalAlive];
 }
 
 - (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
