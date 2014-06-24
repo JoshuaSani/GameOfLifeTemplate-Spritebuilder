@@ -16,6 +16,7 @@
     
     if (self) {
         self.isAlive = NO;
+        NSLog(@"Creature Alive");
     }
     
     return self;
