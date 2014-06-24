@@ -189,6 +189,12 @@ for (int i = 0; i < [_gridArray count]; i++)
                 numAlive++;
             }
             
+            if (currentCreature.livingNeighbors == 2 && currentCreature.isAlive)
+            {
+                checkingArray[i][j] = true;
+                numAlive++;
+            }
+            
             else
             {
                 if ((currentCreature.livingNeighbors <= 1) || (currentCreature.livingNeighbors >= 4))
