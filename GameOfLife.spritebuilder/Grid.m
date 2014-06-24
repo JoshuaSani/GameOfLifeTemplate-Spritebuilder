@@ -155,6 +155,7 @@ static const int GRID_COLUMNS = 10;
 
 -(void) updateCreatures;
 {
+    int numAlive = 0;
     
     bool checkingArray[GRID_ROWS][GRID_COLUMNS];
     
@@ -179,6 +180,7 @@ static const int GRID_COLUMNS = 10;
             if (currentCreature.livingNeighbors == 3)
             {
                 checkingArray[i][j] = true;
+                numAlive++;
             }
             
             else
