@@ -31,11 +31,13 @@
 {
     // this tells the game to call a method called 'step' every half second.
     [self schedule:@selector(step) interval: 0.5f];
+    
 }
 
 -(void)pause
 {
     [self unschedule:@selector(step)];
+    _populationLabel.string = [NSString stringWithFormat:@"%d", _grid.totalAlive];
 }
 
 // this method will get called every half second when you hit the play button and will stop getting called when you hit the pause button
