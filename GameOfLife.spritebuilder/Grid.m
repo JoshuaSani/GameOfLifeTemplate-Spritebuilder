@@ -65,6 +65,7 @@ static const int GRID_COLUMNS = 10;
         y += _cellHeight;
     }
     
+    _totalAlive = 10;
 }
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
@@ -79,7 +80,6 @@ static const int GRID_COLUMNS = 10;
     creature.isAlive = !creature.isAlive;
     
     
-        _totalAlive = 5;
 
 }
 
